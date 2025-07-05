@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Affirmation & Visual Generator</title>
+    <!-- Link to Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="Visual.css">
+    <!-- Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col items-center justify-center min-h-screen p-4 font-inter">
+
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-purple-400 text-center">Your Daily Spark</h1>
+
+    <div class="controls mb-8 flex flex-wrap justify-center gap-4">
+        <select id="themeSelect" class="p-3 rounded-lg bg-gray-700 text-white border border-gray-600 focus:ring-2 focus:ring-purple-500 focus:border-transparent transition-all duration-200">
+            <option value="general">General Inspiration</option>
+            <option value="hope">Hope</option>
+            <option value="strength">Strength</option>
+            <option value="calm">Calm</option>
+            <option value="growth">Growth</option>
+        </select>
+        <button id="generateBtn" class="py-3 px-6 rounded-full font-bold transition-all duration-200 shadow-lg
+                   bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-700 hover:to-pink-600 text-white">
+            Generate Spark
+        </button>
+    </div>
+
+    <div class="relative w-full max-w-2xl bg-gray-800 rounded-2xl shadow-xl overflow-hidden aspect-video">
+        <canvas id="visualCanvas" class="absolute inset-0 w-full h-full"></canvas>
+        <div class="absolute inset-0 flex items-center justify-center p-6 bg-black bg-opacity-40">
+            <p id="quoteDisplay" class="text-2xl md:text-3xl text-white font-semibold text-center leading-relaxed">
+                Choose a theme and click "Generate Spark" to find your inspiration.
+            </p>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="Generate.js"></script>
+</body>
+</html>

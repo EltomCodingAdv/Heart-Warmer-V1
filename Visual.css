@@ -1,0 +1,45 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    background-color: #1a202c; /* Dark background */
+    color: #e2e8f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1rem; /* Add some padding for smaller screens */
+    box-sizing: border-box; /* Include padding in element's total width and height */
+}
+
+/* Ensure font-inter is applied from body */
+.font-inter {
+    font-family: 'Inter', sans-serif;
+}
+
+canvas {
+    display: block;
+}
+
+/* Responsive adjustments for quote text */
+@media (max-width: 768px) {
+    #quoteDisplay {
+        font-size: 1.5rem; /* Smaller font size on mobile */
+    }
+    .controls select, .controls button {
+        width: 100%; /* Full width for controls on small screens */
+    }
+}
+
+@media (max-width: 480px) {
+    #quoteDisplay {
+        font-size: 1.2rem; /* Even smaller font size on very small mobile */
+    }
+    h1 {
+        font-size: 2.5rem; /* Adjust heading size */
+    }
+}

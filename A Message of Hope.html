@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Message of Hope</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="Hope.css">
+</head>
+<body class="bg-gray-900 text-gray-100 flex flex-col items-center justify-center min-h-screen p-4">
+    <h1 class="text-4xl md:text-5xl font-bold mb-6 text-pink-400 text-center">Bloom & Shine</h1>
+    <canvas id="fireworksCanvas" class="w-full h-96"></canvas>
+    
+    <div class="controls">
+        <button id="addRoseBtn">Add a Rose</button>
+        <button id="fireworksBtn">Launch Fireworks</button>
+        <button id="resetBtn">Reset Canvas</button>
+    </div>
+    
+    <div id="messageBox" class="message-box">
+        <p id="messageText" class="message-text"></p>
+    </div>
+    
+    <script src="OF.js"></script>
+</body>
+</html>
